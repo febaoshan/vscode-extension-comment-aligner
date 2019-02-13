@@ -2,9 +2,13 @@
 	"name": "comment-aligner",
 	"displayName": "comment aligner",
 	"description": "A tool for aligning the inline trailing comment",
-	"version": "0.0.2",
+	"version": "1.0.1",
 	"publisher": "huangbaoshan",
-	"icon": "/icon/icon.png",
+	"icon": "icon/icon.png",
+	"repository": {
+		"type": "git",
+		"url":"https://github.com/gitshan/vscode-extension-comment-aligner.git"
+	},
 	"engines": {
 		"vscode": "^1.30.0"
 	},

@@ -16,22 +16,25 @@ None.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+TODO.
 
-For example:
+## License
 
-This extension contributes the following settings:
+MIT.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## Resource code
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+https://github.com/gitshan/vscode-extension-comment-aligner.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.0.1
+
+Add notes.
+
+### 1.0.0
+
+Fix bug: the problem that occurs in line content with comment symbol.
 
 ### 0.0.2
 
