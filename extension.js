@@ -9,13 +9,9 @@ const vscode = require('vscode');
  * @note: 字符串新增空白字符方法
  * @param num: 需要的空白字符个数
  */
-function addBlankString(num) {
-	let blankStr = '';
-	for(let i = 0; i < num; i++) {
-		blankStr += '\xa0';
-	}
-	return blankStr;
-}
+
+const VSC_ECA_spaces = new Array(101).join(' ');                // Creates a constant, global variable that's simply a string comprised of 100 spaces
+const addBlankString = n => VSC_ECA_spaces.slice(-n);           // Returns the last n characters of said string (which coincidentally is the # requested)
 
 /**
  * @param {vscode.ExtensionContext} context
