@@ -1,21 +1,7 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-
-/**
- * @note: 字符串新增空白字符方法
- * @param num: 需要的空白字符个数
- */
-
 const VSC_ECA_spaces = new Array(101).join(' ');                // Creates a constant, global variable that's simply a string comprised of 100 spaces
 const addBlankString = n => VSC_ECA_spaces.slice(-n);           // Returns the last n characters of said string (which coincidentally is the # requested)
 
-/**
- * @param {vscode.ExtensionContext} context
- */
 function activate(context) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
@@ -28,23 +14,24 @@ function activate(context) {
 	let disposable = vscode.commands.registerCommand('extension.commentaligner', function () {
 		// The code you place here will be executed every time your command is executed
 
-		// 步骤分解
-		// 1. 获取所有选中行信息
-		// 2. 获取每行的注释信息（位置、内容）
+		// Process
+		// 1a. Obtain the selected region of test of the current window.
+		// 1b. Break that out into start/end points.
+		// 2.  Iterate those lines, and gather the data
 		// 3. 获取非注释内容最长行
 		// 4. 归位其他行注释位置，对齐最长行注释位置
 
 		let activeTextEditor = vscode.window.activeTextEditor;
 		let activeDocument = activeTextEditor.document;
 
-		// 1. 获取所有选中行信息
+		// 1. Obtain the selected region of test of the current window.
 		let selection = vscode.window.activeTextEditor.selection;
 
-		// 起止行行号
+		// 1b. Break that out into start/end points.
 		let startLine = selection.start.line;
 		let endLine = selection.end.line;
 
-		// 2. 获取每行的注释信息（位置、内容）
+		// 2. Iterate those lines, and gather the data
 		let commentArr = [];                                                           // 选中行信息缓存数组
 		let commentIndexArr = [];                                                      // 选中行注释起始脚标数组，用于筛选出非注释文本内容最长行
 		for(let i = startLine; i <= endLine; i++) {

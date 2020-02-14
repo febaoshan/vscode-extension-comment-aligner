@@ -1,13 +1,13 @@
 {
-	"name": "comment-aligner",
-	"displayName": "comment aligner",
-	"description": "A tool for aligning the inline trailing comment",
+	"name": "inlined",
+	"displayName": "inlined",
+	"description": "Aligns inline, trailing comments to common position",
 	"version": "1.0.1",
-	"publisher": "huangbaoshan",
+	"publisher": "NerdyDeedsLLC",
 	"icon": "icon/icon.png",
 	"repository": {
 		"type": "git",
-		"url":"https://github.com/gitshan/vscode-extension-comment-aligner.git"
+		"url":"https://github.com/NerdyDeedsLLC/vscode-extension-comment-aligner.git"
 	},
 	"engines": {
 		"vscode": "^1.30.0"
@@ -16,12 +16,12 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.commentaligner"
+		"onCommand:extension.inlinement"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [{
-            "command": "extension.commentaligner",
+            "command": "extension.inlinement",
 			"title": "Comment Aligner"
 		}]
 	},
