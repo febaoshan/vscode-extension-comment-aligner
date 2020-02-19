@@ -1,6 +1,6 @@
 {
-	"name": "inlined",
-	"displayName": "inlined",
+	"name": "inlinement",
+	"displayName": "inlinement",
 	"description": "Aligns inline, trailing comments to common position",
 	"version": "1.0.1",
 	"publisher": "NerdyDeedsLLC",
@@ -22,7 +22,7 @@
 	"contributes": {
 		"commands": [{
             "command": "extension.inlinement",
-			"title": "Comment Aligner"
+			"title": "Inlinement: Align Comments"
 		}]
 	},
 	"scripts": {
