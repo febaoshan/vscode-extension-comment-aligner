@@ -1,5 +1,7 @@
 # comment-aligner README
 
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=febaoshan.vscode-extension-comment-aligner)
+
 ## Features
 
 A new extension for aligning the inline trailing comment.
